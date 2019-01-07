@@ -1,15 +1,14 @@
 /* eslint-env node */
 /* eslint no-process-env: 0 */
 
+const path = require('path')
 const ip = require('ip')
-const pkg = require('../../package.json')
 const {
   browsers,
   browsersKeys
 } = require('./browsers')
-const path = require('path')
-const jsCoveragePath = path.resolve(__dirname, '../coverage')
 
+const jsCoveragePath = path.resolve(__dirname, '../coverage')
 const jqueryFile = process.env.USE_OLD_JQUERY ? 'https://code.jquery.com/jquery-1.9.1.min.js' : 'node_modules/jquery/dist/jquery.slim.min.js'
 const bundle = process.env.BUNDLE === 'true'
 const browserStack = process.env.BROWSER === 'true'
