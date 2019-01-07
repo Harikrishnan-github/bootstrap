@@ -7,9 +7,7 @@ const {
   browsersKeys
 } = require('./browsers')
 
-const jqueryFile = process.env.USE_OLD_JQUERY ?
-  'https://code.jquery.com/jquery-1.9.1.min.js' :
-  'node_modules/jquery/dist/jquery.slim.min.js'
+const jqueryFile = process.env.USE_OLD_JQUERY ? 'https://code.jquery.com/jquery-1.9.1.min.js' : 'node_modules/jquery/dist/jquery.slim.min.js'
 const bundle = process.env.BUNDLE === 'true'
 const browserStack = process.env.BROWSER === 'true'
 
